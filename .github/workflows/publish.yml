@@ -38,7 +38,7 @@ jobs:
       - name: Publish
         run: |
           yarn config set npmAuthToken ${{ secrets.NPM_TOKEN }}
-          yarn workspace degen run publish
+          yarn workspace degene-sais-quoi run publish
       - name: Push changes
         run: git push
         env:

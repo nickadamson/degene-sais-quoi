@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
-        run: yarn setup && yarn workspace degen build
+        run: yarn setup && yarn workspace degene-sais-quoi build
 
   lint:
     name: Lint

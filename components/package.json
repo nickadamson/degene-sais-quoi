@@ -1,7 +1,8 @@
 {
-  "name": "degen",
-  "version": "0.0.118",
-  "description": "Design system for Mirror.xyz",
+  "name": "degene-sais-quoi",
+  "version": "0.0.2",
+  "description": "Degen, But Make It Fashion.",
+  "license": "MIT",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "types": "./dist/types/index.d.ts",
@@ -23,8 +24,6 @@
   "files": [
     "dist/**"
   ],
-  "repository": "mirror-xyz/degen",
-  "license": "MIT",
   "scripts": {
     "build": "vite build",
     "clean": "rimraf dist src/components/icons/generated/",
@@ -73,5 +72,13 @@
   "peerDependencies": {
     "react": "^17",
     "react-dom": "^17"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickadamson/degene-saisquoi"
+  },
+  "bugs": {
+    "url": "https://github.com/nickadamson/degene-saisquoi/issues"
+  },
+  "homepage": "https://github.com/nickadamson/degene-saisquoi#README"
 }
