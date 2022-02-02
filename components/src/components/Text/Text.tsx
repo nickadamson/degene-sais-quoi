@@ -21,6 +21,7 @@ type Props = {
   color?: BoxProps['color']
   font?: BoxProps['fontFamily']
   letterSpacing?: BoxProps['letterSpacing']
+  fontStretch?: BoxProps['fontStretch']
   lineHeight?: BoxProps['lineHeight']
   size?: BoxProps['fontSize']
   transform?: BoxProps['textTransform']
@@ -38,6 +39,7 @@ export const Text = React.forwardRef(
       ellipsis,
       font = 'sans',
       letterSpacing,
+      fontStretch,
       lineHeight,
       size,
       transform,
@@ -57,6 +59,7 @@ export const Text = React.forwardRef(
         color={color}
         fontFamily={font}
         fontSize={size}
+        fontStretch={fontStretch}
         fontWeight={weight}
         letterSpacing={letterSpacing}
         lineHeight={lineHeight}

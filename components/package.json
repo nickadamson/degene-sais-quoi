@@ -1,6 +1,6 @@
 {
   "name": "degene-sais-quoi",
-  "version": "0.0.2",
+  "version": "0.0.11",
   "description": "Degen, But Make It Fashion.",
   "license": "MIT",
   "main": "./dist/index.cjs.js",

@@ -8,23 +8,31 @@ const shape = {
   circle: atoms({
     borderRadius: 'full',
   }),
-  square: {},
+  rounded: atoms({
+    borderRadius: 'medium',
+  }),
+  square: atoms({
+    borderRadius: 'none',
+  }),
 }
 
 export type Shape = keyof typeof shape
 
 const size = {
   small: atoms({
-    borderRadius: 'large',
-    fontSize: 'small',
-    height: '10',
+    fontSize: 'tiny',
+    height: '6',
     paddingX: '4',
   }),
   medium: atoms({
-    borderRadius: '2xLarge',
-    fontSize: 'base',
-    height: '14',
+    fontSize: 'small',
+    height: '12',
     paddingX: '5',
+  }),
+  large: atoms({
+    fontSize: 'regular',
+    height: '14',
+    paddingX: '6',
   }),
 }
 
@@ -51,14 +59,26 @@ const tone = {
   green: style({
     vars: getAccentVars(vars.mode.colors.green),
   }),
-  red: style({
-    vars: getAccentVars(vars.mode.colors.red),
+  indigo: style({
+    vars: getAccentVars(vars.mode.colors.indigo),
+  }),
+  orange: style({
+    vars: getAccentVars(vars.mode.colors.orange),
+  }),
+  pink: style({
+    vars: getAccentVars(vars.mode.colors.pink),
   }),
   purple: style({
     vars: getAccentVars(vars.mode.colors.purple),
   }),
-  pink: style({
-    vars: getAccentVars(vars.mode.colors.pink),
+  red: style({
+    vars: getAccentVars(vars.mode.colors.red),
+  }),
+  teal: style({
+    vars: getAccentVars(vars.mode.colors.teal),
+  }),
+  yellow: style({
+    vars: getAccentVars(vars.mode.colors.yellow),
   }),
 }
 
@@ -144,17 +164,15 @@ const variant = {
       vars: {
         [boxShadowColorVar]: vars.colors.transparent,
       },
-      selectors: {
-        '&:hover': {
-          vars: {
-            [boxShadowColorVar]: vars.colors.foregroundTertiary,
-          },
-        },
-        '&:active': {
-          vars: {
-            [boxShadowColorVar]: vars.colors.foregroundTertiary,
-          },
-        },
+    }),
+  ]),
+  invisible: style([
+    atoms({
+      color: 'textTertiary',
+    }),
+    style({
+      vars: {
+        [boxShadowColorVar]: vars.colors.transparent,
       },
     }),
   ]),
@@ -170,7 +188,7 @@ const getShapeSizeCompoundVariant = (shape: Shape, size: Size) => ({
   style: style([
     atoms({
       borderRadius:
-        shape === 'square'
+        shape === 'rounded'
           ? size === 'small'
             ? 'large'
             : '2xLarge'

@@ -163,6 +163,7 @@ const unresponsiveProperties = defineProperties({
     },
     cursor: ['default', 'pointer', 'not-allowed'],
     fontFamily: vars.fonts,
+    fontStretch: vars.fontStretches,
     isolation: ['isolate'],
     objectFit: ['contain', 'cover'],
     opacity: vars.opacity,
