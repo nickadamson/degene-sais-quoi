@@ -5,6 +5,7 @@ import { opacity } from './opacity'
 import { space } from './space'
 import {
   fontSizes,
+  fontStretches,
   fontWeights,
   fonts,
   letterSpacings,
@@ -18,6 +19,7 @@ export const tokens = {
   fonts,
   fontSizes,
   fontWeights,
+  fontStretches,
   letterSpacings,
   lineHeights,
   opacity,

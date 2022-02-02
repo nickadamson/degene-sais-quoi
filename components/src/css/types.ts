@@ -37,6 +37,7 @@ export type Theme = {
   fonts: Tokens['fonts']
   fontSizes: Tokens['fontSizes']
   fontWeights: Tokens['fontWeights']
+  fontStretches: Tokens['fontStretches']
   letterSpacings: Tokens['letterSpacings']
   lineHeights: Tokens['lineHeights']
   opacity: Tokens['opacity']

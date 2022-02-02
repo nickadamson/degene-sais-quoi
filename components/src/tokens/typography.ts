@@ -1,6 +1,7 @@
 export const fonts = {
+  serif: `"Didot", "Source Serif 4", serif`,
   mono: `"iAWriter Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
-  sans: `"Inter var", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+  sans: `"Helvetica Neue", "Neue Helvetica", "Neue-Helvetica", "Helvetica", "Inter var", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
 }
 
 export const fontSizes = {
@@ -8,12 +9,24 @@ export const fontSizes = {
   headingTwo: '1.875rem',
   headingThree: '1.5rem',
   extraLarge: '1.3125rem',
-  large: '1.1875rem',
-  small: '0.9375rem',
-  extraSmall: '0.875rem',
+  tiny: '0.5625rem', //9px
+  small: '0.6875rem', //11px
   label: '0.8125rem',
+  regular: '0.9375rem',
   base: '1.0625rem',
+  large: '1.1875rem',
   root: '16px',
+}
+
+export const fontStretches = {
+  xxCondense: 'ultra-condensed',
+  xCondense: 'extra-condensed',
+  condense: 'condensed',
+  smCondense: 'semi-condensed',
+  smExpand: 'semi-expanded',
+  expand: 'expanded',
+  xExpand: 'extra-expanded',
+  xxExpand: 'ultra-expanded',
 }
 
 export const fontWeights = {
@@ -25,11 +38,13 @@ export const fontWeights = {
 }
 
 export const letterSpacings = {
+  '-0.05': '-0.05em',
   '-0.02': '-0.02em',
   '-0.015': '-0.015em',
   '-0.01': '-0.01em',
   normal: '0',
   '0.03': '0.03em',
+  '0.05': '0.05em',
 }
 
 export const lineHeights = {
