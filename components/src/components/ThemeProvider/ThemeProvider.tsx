@@ -63,7 +63,7 @@ export const ThemeProvider = ({
 
   const resolvedAccent = forcedAccent ?? accent
   const resolvedMode = forcedMode ?? mode
-  React.useEffect(() => {
+  React.useInsertionEffect(() => {
     const root = getElement(element)
     if (root) {
       const enable = disableAnimation()

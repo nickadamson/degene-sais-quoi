@@ -8,21 +8,21 @@
     "playroom"
   ],
   "scripts": {
-    "build": "yarn setup && yarn workspaces foreach -pi run build",
-    "build:components": "yarn setup && yarn workspace degene-sais-quoi build",
-    "clean": "yarn workspaces foreach -p run clean",
-    "dev": "yarn setup && yarn workspaces foreach -pi run dev",
-    "gen:icons": "yarn node scripts/generateIcons.js",
-    "gen:component": "yarn node scripts/generateComponent.js",
-    "lint": "yarn setup && eslint . --cache",
-    "lint:fix": "yarn lint --fix",
+    "build": "pnpm setup && pnpm workspaces foreach -pi run build",
+    "build:components": "pnpm setup && pnpm workspace degene-sais-quoi build",
+    "clean": "pnpm workspaces foreach -p run clean",
+    "dev": "pnpm setup && pnpm workspaces foreach -pi run dev",
+    "gen:icons": "pnpm node scripts/generateIcons.js",
+    "gen:component": "pnpm node scripts/generateComponent.js",
+    "lint": "pnpm setup && eslint . --cache",
+    "lint:fix": "pnpm lint --fix",
     "lint:format": "prettier --write .",
-    "lint:types": "yarn setup && yarn workspaces foreach -p run lint:types",
+    "lint:types": "pnpm setup && pnpm workspaces foreach -p run lint:types",
     "postinstall": "husky install",
-    "prepublish": "yarn clean && yarn build:components",
-    "setup": "yarn gen:icons",
-    "size": "yarn build:components && yarn size-limit",
-    "test": "yarn setup && yarn workspaces foreach -p run test"
+    "prepublish": "pnpm clean && pnpm build:components",
+    "setup": "pnpm gen:icons",
+    "size": "pnpm build:components && pnpm size-limit",
+    "test": "pnpm setup && pnpm workspaces foreach -p run test"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^1.2.0",
@@ -59,10 +59,10 @@
   },
   "lint-staged": {
     "*.{js,mdx,ts,tsx}": [
-      "yarn lint:fix"
+      "pnpm lint:fix"
     ],
     "*.{json,md,yml}": [
-      "yarn lint:format"
+      "pnpm lint:format"
     ]
   }
 }
